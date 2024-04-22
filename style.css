@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600 ;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Space+Mono:ital,wght@0,400;0,700;1,400;1700& wyświetl=zamień'); 
+html, body{
+    padding: 0%;
+    margin: 0%;
+    font-family: Kumbh Sans;
+    font-weight: 400, 700;
+}
+nav{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+a{
+    padding: 2%;
+    text-decoration: none;
+    color: gray;
+    font-size: 16;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+    border-bottom: 6px solid hsl(26, 100%, 55%);
+}
+.logo{
+    width: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.podstrony{
+    width: 70%;
+}
+.koszyk{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prawoNav{
+    width: 9%;
+    display: flex;
+}
+.profilowe{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+hr{
+   width: 90%;
+
+}
+.avatar:hover{
+    outline: solid 3px hsl(26, 100%, 55%);
+    border-radius: 100%;
+}
+.zawartosc{
+    margin-top: 100px;
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+.lewo{
+    width: 50%;
+    text-align: center;
+    display: block;
+}
+.prawo{
+    width: 50%;
+    
+}
+.glownezdjecie{
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 100px 10px gainsboro;
+}
+.zdjeciamiejesze{
+    height: 100px;
+    border-radius: 20px;
+    margin: 15px;
+}
+.zdjeciamiejesze:hover{
+    outline: 3px solid hsl(26, 100%, 55%);
+}
+h2{
+    color: hsl(26, 100%, 55%);
+}
+h1{
+    margin-right: 15px;
+}
+.znizka{
+    color: hsl(26, 100%, 55%);
+    width: 35px;
+    padding: 5px;
+    height: 15px;
+    background-color: hsl(25, 100%, 94%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.cena{
+    display: flex;
+    align-items: center;
+}
+p{
+    width: 50%;
+    color: grey;
+}
+.cenaprzedznizka{
+    font-size: 1.5rem;
+}
+h5{
+    margin-top: 10px;
+    color: gainsboro;
+    text-decoration: line-through;
+
+}
+.sztuki{
+    margin: 0%;
+    background-color: #EFEFEF;
+    display: flex;
+    height: 50px;
+    border-radius: 15px;
+
+
+}
+.sztuki button{
+
+}
+.przyciski{
+    display: flex;
+    justify-content: flex-start
+}
+input{
+    background-color: #EFEFEF;
+    border: none;
+    text-align: center;
+    width: 100px;
+
+}
+button{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.dodaj{
+    margin-left: 50px;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    width: 50%;
+}
+.koszyk {
+    position: relative;
+}
+.cart{
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+    margin-top: 100px;
+}
+.dodaj h4{
+    margin-left: 15px;
+}
