@@ -20,14 +20,33 @@
 </head>
 <body>
 
+  <div class="podstronyVol2">
+    <div class="tralalala">
+      <a href="" ><b>Collections</b></a>
+      <a href=""><b>Men</b></a>
+      <a href=""><b>Women</b></a>
+      <a href=""><b>About</b></a>
+      <a href=""><b>Contact</b></a>
+    </div>
+  </div>
+
+  <div class="menu">
   <nav>
+
+    <div class="dzyndzel">
+
+      <button onclick="menu()">
+        <svg width="20" height="15" xmlns="http://www.w3.org/2000/svg" id="lala"><path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd"/></svg>
+      </button>
+
+    </div>
 
     <div class="logo">
       <img src="images/logo.svg">
     </div>
 
     <div class="podstrony">
-      <a href="">Collections</a>
+      <a href="" class="usuniete">Collections</a>
       <a href="">Men</a>
       <a href="">Women</a>
       <a href="">About</a>
@@ -39,8 +58,20 @@
 
     <div class="koszyk">
 
-      <img src="images/icon-cart.svg"  onclick="nazwa()">
-      <div class="cart" id="cart">lalla</div>
+      <img src="images/icon-cart.svg"  onclick="koszyk()">
+      <div class="cart" id="cart">
+        
+        <div class="top-cart">
+          <h3>Cart</h3>
+          <a href="index.html" class="strzalka"><img src="images/strzalka.png" class="strzala"></a>
+        </div>
+        <hr class="vol2">
+
+        <div class="emptyCart">
+          <p>Your cart is empty.</p>
+        </div>
+
+      </div>
 
     </div>
 
@@ -55,19 +86,20 @@
 </nav>
 
 <hr>
+</div>
 
  <main>
   <div class="zawartosc">
 
     <div class="lewo">
 
-      <img src="images/image-product-1.jpg" class="glownezdjecie">
+      <img src="images/image-product-1.jpg" class="glownezdjecie" id="glownezdjecie">
 
       <div class="lewodol">
-        <img src="images/image-product-1.jpg" class="zdjeciamiejesze">
-        <img src="images/image-product-2.jpg" class="zdjeciamiejesze">
-        <img src="images/image-product-3.jpg" class="zdjeciamiejesze">
-        <img src="images/image-product-4.jpg" class="zdjeciamiejesze"> 
+        <img src="images/image-product-1.jpg" class="zdjeciamiejesze" onclick="zdjecia1()">
+        <img src="images/image-product-2.jpg" class="zdjeciamiejesze" onclick="zdjecia2()">
+        <img src="images/image-product-3.jpg" class="zdjeciamiejesze" onclick="zdjecia3()">
+        <img src="images/image-product-4.jpg" class="zdjeciamiejesze" onclick="zdjecia4()"> 
       </div>
 
     </div>
@@ -83,18 +115,19 @@
       </p>
       
       <div class="cena">
-        <h1>$125.00</h1>
+        <h1 class="h1cena">$125.00</h1>
         <div class="znizka"><h4>50%</h4></div>
       </div>
+
       <div class="cenaprzedznizka"><h5>$250.00</h5></div>
     
       <div class="przyciski">
 
         <div class="sztuki">
 
-        <button><img src="images/icon-minus.svg" class="minus"></button>
-        <input type="text" placeholder="0">
-        <button><img src="images/icon-plus.svg" class="plus"></button>
+        <button><img src="images/icon-minus.svg" class="minus" id="minus"  onclick="odjejmowanie()"></button>
+        <input type="text" value="0" id="input">
+        <button><img src="images/icon-plus.svg" class="plus" id="plus" onclick="dodawanie()"></button>
 
         </div>
         
@@ -109,9 +142,56 @@
  </main>
   
 <script>
-  function nazwa(){
+  function koszyk(){
     let cart = document.getElementById("cart");
-    cart.style.display = "flex"
+    cart.style.display = "block"
+  }
+
+  function zdjecia1(){
+    let mainimg = document.getElementById("glownezdjecie");
+    let img1 = "images/image-product-1.jpg";
+    mainimg.src = img1;
+  }
+
+  function zdjecia2(){
+    let mainimg = document.getElementById("glownezdjecie");
+    let img1 = "images/image-product-2.jpg";
+    mainimg.src = img1;
+  }
+
+  function zdjecia3(){
+    let mainimg = document.getElementById("glownezdjecie");
+    let img1 = "images/image-product-3.jpg";
+    mainimg.src = img1;
+  }
+
+  function zdjecia4(){
+    let mainimg = document.getElementById("glownezdjecie");
+    let img1 = "images/image-product-4.jpg";
+    mainimg.src = img1;
+  }
+
+  function dodawanie() {
+    let plus = document.getElementById("input").value;
+    console.log(plus);
+    let temp;
+    plus = parseInt(plus);
+    temp = plus += 1;
+    document.getElementById("input").value = temp;
+  }
+
+  function odjejmowanie() {
+    let plus = document.getElementById("input").value;
+    console.log(plus);
+    let temp;
+    plus = parseInt(plus);
+    temp = plus -= 1;
+    document.getElementById("input").value = temp;
+  }
+
+  function menu(){
+    let lala = document.getElementById("lala");
+    lala.style.display = "block"
   }
 </script>
 
